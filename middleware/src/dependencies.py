@@ -7,7 +7,9 @@ class Web3Client():
     __w3 = None
     __instance = None
     __contract_abi = abi
-    __contract_address = '0xb1Fc2313612064EEeeb232815481BF6c8bb7c280'
+    # __contract_address = '0xb1Fc2313612064EEeeb232815481BF6c8bb7c280'
+    __contract_address = '0x424AF688e1597e913c5EbAf0742E8669C58d56e7'
+
 
 
     @classmethod
@@ -28,6 +30,7 @@ class Web3Client():
 
 
     def get_candidate_count(self):
+        print(self.get_contract().functions.candidateCount().call())
         return self.get_contract().functions.candidateCount().call()
 
     

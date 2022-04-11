@@ -1,7 +1,234 @@
+# abi = [
+#   {
+#     "inputs": [],
+#     "payable": False,
+#     "stateMutability": "nonpayable",
+#     "type": "constructor"
+#   },
+#   {
+#     "anonymous": False,
+#     "inputs": [
+#       {
+#         "indexed": False,
+#         "internalType": "string",
+#         "name": "candidateName",
+#         "type": "string"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "string",
+#         "name": "partyName",
+#         "type": "string"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "uint256",
+#         "name": "voteCount",
+#         "type": "uint256"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "uint256",
+#         "name": "candidateNo",
+#         "type": "uint256"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "string",
+#         "name": "organization",
+#         "type": "string"
+#       }
+#     ],
+#     "name": "CandidateAdded",
+#     "type": "event"
+#   },
+#   {
+#     "anonymous": False,
+#     "inputs": [
+#       {
+#         "indexed": False,
+#         "internalType": "uint256",
+#         "name": "candidateNo",
+#         "type": "uint256"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "string",
+#         "name": "candidateName",
+#         "type": "string"
+#       },
+#       {
+#         "indexed": False,
+#         "internalType": "string",
+#         "name": "partyName",
+#         "type": "string"
+#       }
+#     ],
+#     "name": "VoteCasted",
+#     "type": "event"
+#   },
+#   {
+#     "constant": True,
+#     "inputs": [],
+#     "name": "candidateCount",
+#     "outputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "",
+#         "type": "uint256"
+#       }
+#     ],
+#     "payable": False,
+#     "stateMutability": "view",
+#     "type": "function"
+#   },
+#   {
+#     "constant": True,
+#     "inputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "",
+#         "type": "uint256"
+#       }
+#     ],
+#     "name": "candidates",
+#     "outputs": [
+#       {
+#         "internalType": "string",
+#         "name": "organization",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "candidateName",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "partyName",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "uint256",
+#         "name": "voteCount",
+#         "type": "uint256"
+#       },
+#       {
+#         "internalType": "bool",
+#         "name": "isWinner",
+#         "type": "bool"
+#       }
+#     ],
+#     "payable": False,
+#     "stateMutability": "view",
+#     "type": "function"
+#   },
+#   {
+#     "constant": True,
+#     "inputs": [],
+#     "name": "totalVotes",
+#     "outputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "",
+#         "type": "uint256"
+#       }
+#     ],
+#     "payable": False,
+#     "stateMutability": "view",
+#     "type": "function"
+#   },
+#   {
+#     "constant": True,
+#     "inputs": [],
+#     "name": "winner",
+#     "outputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "",
+#         "type": "uint256"
+#       }
+#     ],
+#     "payable": False,
+#     "stateMutability": "view",
+#     "type": "function"
+#   },
+#   {
+#     "constant": False,
+#     "inputs": [
+#       {
+#         "internalType": "string",
+#         "name": "_cName",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "_pName",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "_oName",
+#         "type": "string"
+#       }
+#     ],
+#     "name": "addCandidate",
+#     "outputs": [],
+#     "payable": False,
+#     "stateMutability": "nonpayable",
+#     "type": "function"
+#   },
+#   {
+#     "constant": False,
+#     "inputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "_cId",
+#         "type": "uint256"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "_candName",
+#         "type": "string"
+#       },
+#       {
+#         "internalType": "string",
+#         "name": "_partName",
+#         "type": "string"
+#       }
+#     ],
+#     "name": "casteVote",
+#     "outputs": [],
+#     "payable": False,
+#     "stateMutability": "nonpayable",
+#     "type": "function"
+#   },
+#   {
+#     "constant": False,
+#     "inputs": [
+#       {
+#         "internalType": "string",
+#         "name": "_oName",
+#         "type": "string"
+#       }
+#     ],
+#     "name": "getWinner",
+#     "outputs": [
+#       {
+#         "internalType": "uint256",
+#         "name": "",
+#         "type": "uint256"
+#       }
+#     ],
+#     "payable": False,
+#     "stateMutability": "nonpayable",
+#     "type": "function"
+#   }
+# ]
+
 abi = [
   {
     "inputs": [],
-    "payable": False,
     "stateMutability": "nonpayable",
     "type": "constructor"
   },
@@ -68,7 +295,6 @@ abi = [
     "type": "event"
   },
   {
-    "constant": True,
     "inputs": [],
     "name": "candidateCount",
     "outputs": [
@@ -78,12 +304,11 @@ abi = [
         "type": "uint256"
       }
     ],
-    "payable": False,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": True
   },
   {
-    "constant": True,
     "inputs": [
       {
         "internalType": "uint256",
@@ -119,12 +344,11 @@ abi = [
         "type": "bool"
       }
     ],
-    "payable": False,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": True
   },
   {
-    "constant": True,
     "inputs": [],
     "name": "totalVotes",
     "outputs": [
@@ -134,12 +358,11 @@ abi = [
         "type": "uint256"
       }
     ],
-    "payable": False,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": True
   },
   {
-    "constant": True,
     "inputs": [],
     "name": "winner",
     "outputs": [
@@ -149,12 +372,11 @@ abi = [
         "type": "uint256"
       }
     ],
-    "payable": False,
     "stateMutability": "view",
-    "type": "function"
+    "type": "function",
+    "constant": True
   },
   {
-    "constant": False,
     "inputs": [
       {
         "internalType": "string",
@@ -174,12 +396,10 @@ abi = [
     ],
     "name": "addCandidate",
     "outputs": [],
-    "payable": False,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "constant": False,
     "inputs": [
       {
         "internalType": "uint256",
@@ -199,12 +419,10 @@ abi = [
     ],
     "name": "casteVote",
     "outputs": [],
-    "payable": False,
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "constant": False,
     "inputs": [
       {
         "internalType": "string",
@@ -220,7 +438,6 @@ abi = [
         "type": "uint256"
       }
     ],
-    "payable": False,
     "stateMutability": "nonpayable",
     "type": "function"
   }

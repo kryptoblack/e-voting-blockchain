@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+  # ganache-cli:
+  #   container_name: ganache-cli
+  #   image: trufflesuite/ganache-cli:latest
+  #   ports: 
+  #     - 7545:7545
+  #   # profiles:
+  #   #   - development
+  #   #   - blockchain
+  #   entrypoint: 
+  #     - node
+  #     - /app/ganache-core.docker.cli.js
+  #     - --db=/app/ganache_data
+  #     - --networkId
+  #     - '5777'
+  #     - --hostname
+  #     - '0.0.0.0'
+  #     - --port
+  #     - '7545'
+  #     - --mnemonic
+  #     - grape solution air laundry garage body erupt thought ritual renew ginger tackle
+  #   volumes:
+  #     - ./blockchain/ganache_data:/app/ganache_data
+
+  truffle-ganache:
+    container_name: truffle-ganache
+    build: ./blockchain
+    ports:
+      - 7545:7545
+    profiles:
+      - development
+      - blockchain
+    volumes:
+      - ./blockchain:/usr/src/blockchain
+      - ./blockchain/ganache_data:/usr/src/ganache_data
+    entrypoint:
+      - node
+      - /app/ganache-core.docker.cli.js
+      - --db=/app/ganache_data
+      - --networkId
+      - '5777'
+      - --hostname
+      - '0.0.0.0'
+      - --port
+      - '7545'
+      - --mnemonic
+      - grape solution air laundry garage body erupt thought ritual renew ginger tackle
+      - --accountKeysPath
+      - /usr/src/blockchain/accounts.json
+
+  middleware:
+    container_name: middleware
+    build: ./middleware
+    ports:
+      - 8000:8000
+    volumes: 
+      - ./middleware:/usr/src/app

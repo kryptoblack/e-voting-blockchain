@@ -12,7 +12,7 @@ from src.dependencies import Web3Client
 
 app = FastAPI(
     title="E-Voting-Middleware",
-    description="Blockchain middleware is used to apply blockchain to use cases in industries that are not well served by existing blockchain technologies. Here it is used as a bridge between the blockchain and the industry.",
+    description="Middlware is the software that sits between the user and the blockchain. It is used to verify the authenticity of the user and to ensure that the user is authorized to vote. The middleware is used to make it easier for the developer of the application to integrate with the blockchain without having any knowledge of the blockchain.",
     version="0.0.1",
 )
 

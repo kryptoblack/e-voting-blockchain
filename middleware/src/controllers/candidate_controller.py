@@ -33,6 +33,7 @@ def get_candidate(account: str, w3_client: Web3Client = Depends(Web3Client.get_c
 
         return JSONResponse(content=result, status_code=status.HTTP_200_OK)
     except Exception as e:
+        print(e)
         return JSONResponse(content=ErrorResponse(code="internal-server-error", message="Internal Server Error", detail="Something went wrong").dict(), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 

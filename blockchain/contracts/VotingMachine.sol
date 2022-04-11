@@ -30,7 +30,7 @@ contract VotingMachine {
         string partyName
     );
 
-    constructor() public {
+    constructor() {
         totalVotes = 0;
         candidateCount = 0;
         addCandidate(
