@@ -4,6 +4,7 @@ from fastapi import FastAPI, Depends
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.controllers.candidate_controller import router as candidate_router
+from src.controllers.status_controller import router as status_router
 
 from src.models.response_model import get_formatted_response, ErrorResponse
 
@@ -32,7 +33,15 @@ app.include_router(
     candidate_router, 
     prefix="/candidate", 
     tags=["Candidate"],
-    # dependencies=[Depends(Web3Client.get_client)],
+    responses={
+        500: get_formatted_response(ErrorResponse(code="internal-server-error", message="Internal Server Error", detail="Something went wrong")),
+    }
+)
+
+app.include_router(
+    status_router,
+    prefix="/status",
+    tags=["Status"],
     responses={
         500: get_formatted_response(ErrorResponse(code="internal-server-error", message="Internal Server Error", detail="Something went wrong")),
     }

@@ -5,23 +5,13 @@ from src.abi import abi
 # Blockchain connection
 class Web3Client():
     __w3 = None
-    __instance = None
     __contract_abi = abi
-    # __contract_address = '0xb1Fc2313612064EEeeb232815481BF6c8bb7c280'
-    __contract_address = '0x424AF688e1597e913c5EbAf0742E8669C58d56e7'
-
-
-
-    @classmethod
-    def get_client(cls):
-        if not cls.__instance:
-            cls.__instance = Web3Client()
-            if not cls.__w3:
-                cls.__w3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
-        return cls.__instance
-
+    __contract_address = '0xC3FeCD485A3088b611fea1888d3599a7b681B78a'
 
     def get_contract(self):
+        if not self.__w3:
+            self.__w3 = Web3(Web3.HTTPProvider('http://172.23.0.2:7545'))
+            
         return self.__w3.eth.contract(self.__contract_address, abi=self.__contract_abi)
 
 
@@ -30,7 +20,6 @@ class Web3Client():
 
 
     def get_candidate_count(self):
-        print(self.get_contract().functions.candidateCount().call())
         return self.get_contract().functions.candidateCount().call()
 
     

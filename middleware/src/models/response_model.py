@@ -31,7 +31,7 @@ class ErrorResponse(BaseModel):
 
 
 class SuccessResponse(BaseModel):
-    code: str
+    code: str = "success"
     message: str
     
     class Config:

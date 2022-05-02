@@ -1,0 +1,25 @@
+truffle-ganache  | Available Accounts
+truffle-ganache  | ==================
+truffle-ganache  | (0) 0xAA02161d4E7f69ba50339AeF3b57a298aF56F1F8 (1000 ETH)    
+truffle-ganache  | (1) 0xd591112021CF86318459952B4C7C53458F216863 (1000 ETH)    
+truffle-ganache  | (2) 0xC85490a5062C08cF67daa0DEa716Eb0729cfC467 (1000 ETH)    
+truffle-ganache  | (3) 0xCB307fa82ddE2dEF3eC5086A5c8a13b5Aec9500c (1000 ETH)    
+truffle-ganache  | (4) 0xE18426aF917d0aC4Cd928F8fFdB11cd78fF59bc0 (1000 ETH)    
+truffle-ganache  | (5) 0xA5eEC369189302456C6571190A5cF07D539796f4 (1000 ETH)    
+truffle-ganache  | (6) 0xBaF655009e0D1F0557b4637F5ba72eaaf419871a (1000 ETH)    
+truffle-ganache  | (7) 0x8e69Cd4C5FF9CC381F3f613109D00a06aeE22057 (1000 ETH)    
+truffle-ganache  | (8) 0x93a742B8c5dc9A5ea04c21FD29A1F50Cb8608E6e (1000 ETH)    
+truffle-ganache  | (9) 0x0C775A9e5C5ECe9ACF0BEdEe49FCFe7771c77Ff2 (1000 ETH)    
+truffle-ganache  |
+truffle-ganache  | Private Keys
+truffle-ganache  | ==================
+truffle-ganache  | (0) 0xb130b838edea24a649e3eb19e4256ad5c9dcc3d62821e6bff1425fa57bccb67a
+truffle-ganache  | (1) 0x50aa0a1a2de97490bb336bd8a312471a96e1bc13c33045f847d561f9b56f93c6
+truffle-ganache  | (2) 0x54413059bd8dca205f691decc6597265813ad06a08158286710f150ff33037d7
+truffle-ganache  | (3) 0x8bd4a821b3a78beeb24a1be8074030c6c4b5b5087e8993c6d3f303bd233223c8
+truffle-ganache  | (4) 0x7f8f77e005d72e5abc1c046bba9ff6414adc51c2b44277423451f79d77387510
+truffle-ganache  | (5) 0x8be3cde4df7d33bef9a3fdd76a1b9742f7a089783d68d2211811f3c89f5a2c4b
+truffle-ganache  | (6) 0xc2f4363f4b00057bd4b856252cc0cb9aafaaa652474590f71cc7813ed236aa70
+truffle-ganache  | (7) 0xadbc723bff3181f9e0aa26410d87f01236b860b6bbfa5608d31f9dd64e9e313d
+truffle-ganache  | (8) 0x6dc4d5c0205801d6da8f923d1c181cd34c202614bc1e9cb0813a50e29b33d539
+truffle-ganache  | (9) 0x8c80eeee7879ba63da0de08a94a4ad78f60eabca7384c20f749b40ecc046e1f3

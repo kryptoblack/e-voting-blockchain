@@ -14,7 +14,7 @@ import pprint
 router = APIRouter()
 
 @router.get("", response_model=List[Candidate])
-def get_candidate(account: str, w3_client: Web3Client = Depends(Web3Client.get_client)):
+def get_candidate(account: str, w3_client: Web3Client = Depends(Web3Client)):
     '''Used to get all candidates'''
     try:
         result = list()
@@ -38,29 +38,29 @@ def get_candidate(account: str, w3_client: Web3Client = Depends(Web3Client.get_c
 
 
 @router.post("", response_model=SuccessResponse)
-def add_candidate(body: AddCandidatePostModel, w3_client: Web3Client = Depends(Web3Client.get_client)):
+def add_candidate(body: AddCandidatePostModel, w3_client: Web3Client = Depends(Web3Client)):
     '''Used to add candidates'''
     try:
         assert w3_client.add_candidate(body.name, body.party, body.account)
 
-        return JSONResponse(content=SuccessResponse(code="success", message="Successful").dict(), status_code=status.HTTP_200_OK)
+        return JSONResponse(content=SuccessResponse(message="Successful").dict(), status_code=status.HTTP_200_OK)
     except Exception as e:
         return JSONResponse(content=ErrorResponse(code="internal-server-error", message="Internal Server Error", detail="Something went wrong").dict(), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @router.post("/caste-vote", response_model=SuccessResponse)
-def caste_vote(body: CastVotePostModel, w3_client: Web3Client = Depends(Web3Client.get_client)):
+def caste_vote(body: CastVotePostModel, w3_client: Web3Client = Depends(Web3Client)):
     '''Used to caste vote'''
     try:
         assert w3_client.caste_vote(body.candidate_id, body.name, body.party, body.account)
 
-        return JSONResponse(content=SuccessResponse(code="success", message="Successful").dict(), status_code=status.HTTP_200_OK)
+        return JSONResponse(content=SuccessResponse(message="Successful").dict(), status_code=status.HTTP_200_OK)
     except Exception as e:
         return JSONResponse(content=ErrorResponse(code="internal-server-error", message="Internal Server Error", detail="Something went wrong").dict(), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @router.get("/winner", response_model=Candidate)
-def get_winner(account: str, w3_client: Web3Client = Depends(Web3Client.get_client)):
+def get_winner(account: str, w3_client: Web3Client = Depends(Web3Client)):
     '''Used to get the winner'''
     try:
         winners = w3_client.get_winner(account)
